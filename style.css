@@ -1,0 +1,161 @@
+:root {
+  --cor-degrade: linear-gradient(to right, #000000, rgb(0, 163, 224));
+  --cor-de-fundo: #caf4ff;
+  --cor-primaria: #ffffff;
+  --cor-secundaria: #3c5b6f;
+  --cor-de-destaque: #153448;
+  --cor-hover: #948979;
+  --fonte-principal: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background: var(--cor-de-destaque);
+}
+
+.cabecalho {
+  padding: 24px;
+  text-align: center;
+  background: var(--cor-degrade);
+  margin-bottom: 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+.titulo {
+  color: var(--cor-de-fundo);
+  font-size: xx-large;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.9);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--cor-de-destaque);
+  border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  padding: 10px;
+}
+
+.logo img {
+  max-width: 100px;
+  border-radius: 20px;
+  display: block;
+  margin: auto;
+}
+
+.informacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 6px;
+  gap: 10px;
+  text-align: center;
+}
+
+.informacao a {
+  text-decoration: none;
+}
+
+.informacao button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--cor-degrade);
+  color: var(--cor-primaria);
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.informacao button:hover {
+  border-color: var(--cor-primaria); /* Muda a cor da borda ao passar o mouse */
+}
+
+.informacao button img {
+  max-height: 20px;
+  color: var(--cor-primaria);
+}
+
+.redes {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.info {
+  color: var(--cor-primaria);
+  font-size: x-large;
+  font-weight: 600;
+  font-family: var(--fonte-principal);
+  margin: 12px;
+}
+
+.redes a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.redes img {
+  max-height: 20px;
+}
+
+/* Estilos para desktop */
+@media (min-width: 768px) {
+  body {
+    padding: 20px; /* Aumenta o espaçamento ao redor do conteúdo */
+  }
+
+  .container {
+    flex-direction: row; /* Muda a direção do layout para linha em telas maiores */
+    justify-content: space-around; /* Espaça os elementos uniformemente */
+    padding: 40px;
+    margin: 0; /* Aumenta o padding interno da container */
+  }
+
+  .informacao {
+    width: 50%; /* Define uma largura fixa para a seção de informações */
+    gap: 20px; /* Aumenta o espaço entre os botões e outros elementos */
+  }
+
+  .logo img {
+    max-height: 150px; /* Aumenta a altura máxima da logo para telas maiores */
+  }
+
+  .cabecalho {
+    padding: 30px;
+    border-radius: 10px; /* Aumenta o padding do cabeçalho em telas maiores */
+  }
+
+  .titulo {
+    font-size: 3rem; /* Aumenta o tamanho da fonte do título em telas maiores */
+  }
+
+  .info {
+    font-size: 2rem; /* Aumenta o tamanho do texto informativo */
+  }
+
+  .redes {
+    gap: 15px; /* Aumenta o espaço entre os ícones das redes sociais */
+  }
+
+  .redes img {
+    max-height: 30px; /* Aumenta a altura dos ícones de redes sociais */
+  }
+}
